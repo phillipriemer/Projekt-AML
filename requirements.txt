@@ -1,0 +1,29 @@
+# ==============================================================================
+# PYTHON-PAKETE DES PROJEKTS (Python 3.12) – feste Versionen, mit denen alles getestet ist
+# ==============================================================================
+# Installieren (aus Projektordner, nach Anlegen der .venv, siehe README):
+#   .venv/bin/pip install -r requirements.txt
+# Docker-Image installiert nur Abschnitt 1 (siehe web/Dockerfile) –
+# bei neuer Version beide Stellen gleich halten.
+
+
+# ==============================================================================
+# 1. BETRIEB (API, Merkmale, Modell laden) – auch im Docker-Image
+# ==============================================================================
+
+fastapi==0.143.0
+uvicorn==0.54.0
+pandas==3.0.6
+numpy==2.5.3
+lightgbm==4.7.0
+scikit-learn==1.9.1
+joblib==1.6.0
+
+
+# ==============================================================================
+# 2. NUR LOKAL (Training, Simulator, Tests)
+# ==============================================================================
+
+pyarrow==26.0.1        # Parquet-Dateien lesen und schreiben
+httpx==0.28.1          # Simulator schickt damit Transaktionen an die API
+pytest==9.2.0          # Tests
